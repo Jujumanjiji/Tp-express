@@ -1,0 +1,52 @@
+doctype html
+html(lang='en')
+  head
+    title Bootstrap register form
+  link#bootstrap-css(href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css', rel='stylesheet')
+  script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')
+  script(src='//code.jquery.com/jquery-1.11.1.min.js')
+  body
+    h1 Form
+    #container.col
+      form.form-horizontal(action='', method='POST')
+        fieldset
+          #legend
+            legend
+              p1 Register
+          .control-group
+            // Username
+            l1
+              label.control-label(for='username') Username
+            .controls
+              l1
+                input#username.input-xlarge(type='text', name='username', placeholder='')
+              p.help-block Username can contain any letters or numbers, without spaces
+          .control-group
+            // E-mail
+            l1
+              label.control-label(for='email') E-mail
+            .controls
+              l1
+                input#email.input-xlarge(type='text', name='email', placeholder='')
+            p.help-block Please provide your E-mail
+          .control-group
+            // Password
+            l1
+              label.control-label(for='password') Password
+            .controls
+              l1
+                input#password.input-xlarge(type='password', name='password', placeholder='')
+              p.help-block Password should be at least 4 characters
+          .control-group
+            // Password
+            l1
+              label.control-label(for='password_confirm') Password (Confirm)
+            .controls
+              l1
+                input#password_confirm.input-xlarge(type='password', name='password_confirm', placeholder='')
+              p.help-block Please confirm password
+          .control-group
+            // Button
+            .controls
+              l1
+                button.btn.btn-success Register
